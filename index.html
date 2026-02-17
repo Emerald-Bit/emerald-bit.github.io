@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chisom Ihuoma | Business & Data Analyst</title>
+    <title>Chisom Ihuoma | Strategy & Data Analytics</title>
     
     <!-- GOOGLE ANALYTICS (GA4) -->
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C18HQXJ0RP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-C18HQXJ0RP');
     </script>
 
-    <!-- Tailwind CSS for styling -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,245 +22,415 @@
                 extend: {
                     colors: {
                         forest: {
-                            50: '#F1F7F1',
-                            100: '#CCE3CB',
-                            200: '#89B199',
-                            500: '#5A8081',
-                            700: '#3E5C59',
-                            900: '#303F47',
+                            50: '#f2f6f5',
+                            100: '#e1e9e7',
+                            200: '#c5d5d1',
+                            300: '#9db8b2',
+                            400: '#71958e',
+                            500: '#5a8081', // Main Primary
+                            600: '#466667',
+                            700: '#3e5c59', // Dark Accent
+                            800: '#334948',
+                            900: '#2a3a3a', // Deep Neutral
+                            950: '#162323',
                         }
-                    }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    },
                 }
             }
         }
     </script>
     
-    <!-- Fonts and Icons -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        html { scroll-behavior: smooth; }
-        /* Prevent layout shift during font loading */
-        .font-loaded { opacity: 1; transition: opacity 0.3s ease; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-mesh {
+            background-color: #f2f6f5;
+            background-image: radial-gradient(at 0% 0%, hsla(160,15%,92%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(170,20%,90%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(180,15%,92%,1) 0, transparent 50%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -12px rgba(62, 92, 89, 0.15);
+        }
     </style>
 </head>
-<body class="bg-forest-50 text-forest-900">
+<body class="bg-white text-forest-900 selection:bg-forest-100 selection:text-forest-900">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-forest-900">Chisom Ihuoma</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#home" class="text-gray-600 hover:text-forest-700 font-medium transition duration-300">Home</a>
-                <a href="#projects" class="text-gray-600 hover:text-forest-700 font-medium transition duration-300">Projects</a>
-                <a href="#articles" class="text-gray-600 hover:text-forest-700 font-medium transition duration-300">Articles</a>
-                <a href="#about" class="text-gray-600 hover:text-forest-700 font-medium transition duration-300">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-forest-700 font-medium transition duration-300">Skills</a>
-                <a href="#contact" class="text-gray-600 hover:text-forest-700 font-medium transition duration-300">Contact</a>
-            </div>
-            <a href="#contact" class="hidden md:block bg-forest-700 text-white px-4 py-2 rounded-lg hover:bg-forest-900 transition duration-300">Get In Touch</a>
+    <!-- Navigation -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-forest-100/50">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold tracking-tight text-forest-900 group">
+                CHISOM <span class="text-forest-500 group-hover:text-forest-700 transition-colors">IHUOMA</span>
+            </a>
             
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-button" class="md:hidden text-forest-900 focus:outline-none">
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#home" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Home</a>
+                <a href="#projects" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Projects</a>
+                <a href="#roadmap" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Roadmap</a>
+                <a href="#articles" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Insights</a>
+                <a href="#contact" class="bg-forest-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-forest-700 transition-all shadow-lg shadow-forest-900/10">
+                    Connect
+                </a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden p-2 text-forest-900">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
-        </nav>
-        
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-b border-forest-100">
-            <a href="#home" class="block py-2 text-gray-600 hover:text-forest-700">Home</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-forest-700">Projects</a>
-            <a href="#articles" class="block py-2 text-gray-600 hover:text-forest-700">Articles</a>
-            <a href="#about" class="block py-2 text-gray-600 hover:text-forest-700">About</a>
-            <a href="#skills" class="block py-2 text-gray-600 hover:text-forest-700">Skills</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-forest-700">Contact</a>
         </div>
-    </header>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-forest-100 shadow-xl md:hidden animate-in slide-in-from-top duration-300">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#home" class="mobile-link text-lg font-medium text-forest-900">Home</a>
+                <a href="#projects" class="mobile-link text-lg font-medium text-forest-900">Projects</a>
+                <a href="#roadmap" class="mobile-link text-lg font-medium text-forest-900">Roadmap</a>
+                <a href="#articles" class="mobile-link text-lg font-medium text-forest-900">Insights</a>
+                <a href="#contact" class="mobile-link text-lg font-bold text-forest-500">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="bg-white">
-            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-forest-900 leading-tight mb-6">Business Analyst & Strategy Consultant</h1>
-                <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Ex-PwC analyst with a STEM background. I specialize in driving operational efficiency—recently delivering a 40% time saving through AI-powered automation.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#projects" class="bg-forest-700 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-forest-900 shadow-lg transition duration-300">View My Work</a>
-                    <a href="#contact" class="border-2 border-forest-700 text-forest-700 px-10 py-4 rounded-xl font-semibold text-lg hover:bg-forest-50 transition duration-300">Contact Me</a>
+        <section id="home" class="hero-mesh min-h-[85vh] flex items-center border-b border-forest-100">
+            <div class="container mx-auto px-6 py-20">
+                <div class="max-w-4xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-100 text-forest-700 text-xs font-bold tracking-widest uppercase mb-8">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-forest-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-forest-600"></span>
+                        </span>
+                        Strategy & Data Analytics
+                    </div>
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-forest-900 leading-[1.1] mb-8 tracking-tighter">
+                        Engineering <span class="text-forest-500">Growth</span> <br class="hidden md:block"> with Intelligent Data.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl leading-relaxed font-light">
+                        Ex-PwC analyst with a STEM background. Specialised in high-scale data systems, process optimisation, and AI-powered automation for complex industries.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#projects" class="bg-forest-700 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-forest-900 transition-all shadow-xl shadow-forest-900/20 active:scale-95">
+                            View Portfolio
+                        </a>
+                        <div class="flex items-center gap-4 text-forest-900 font-bold group cursor-pointer" onclick="document.getElementById('roadmap').scrollIntoView()">
+                            <span class="border-b-2 border-forest-100 group-hover:border-forest-700 transition-all">Future Roadmap</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-24 bg-forest-50">
+        <!-- Technical Stack -->
+        <section class="py-12 bg-white border-b border-forest-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-forest-900 mb-16">Featured Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+                    <span class="font-bold text-xl tracking-tight italic">Snowflake & ETL</span>
+                    <span class="font-bold text-xl tracking-tight italic">XGBoost & MLflow</span>
+                    <span class="font-bold text-xl tracking-tight italic">Power BI & SQL</span>
+                    <span class="font-bold text-xl tracking-tight italic">Neural Networks</span>
+                    <span class="font-bold text-xl tracking-tight italic">LLM Architecture</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid (Strategic Engagements) -->
+        <section id="projects" class="py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-sm font-black text-forest-500 uppercase tracking-[0.3em] mb-4">Portfolio</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-forest-900 tracking-tight">Strategic Engagements</h3>
+                </div>
+                
+                <!-- Grid: 3 Columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     
-                    <!-- AI Project -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-forest-100 flex flex-col group">
-                        <div class="bg-forest-50 w-16 h-16 rounded-lg flex items-center justify-center text-forest-700 mb-6 group-hover:bg-forest-700 group-hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
+                    <!-- Clinical Trials -->
+                    <div class="flex flex-col h-full p-1 border-b-4 border-forest-100 hover:border-forest-700 transition-all duration-500 group">
+                        <span class="text-xs font-black text-gray-400 uppercase tracking-widest group-hover:text-forest-500 transition-colors">Machine Learning</span>
+                        <h4 class="text-2xl font-bold text-forest-900 mt-4 mb-3">Clinical Trial Risk Model</h4>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4">Developed an XGBoost model (F1 >0.6) to predict early clinical trial termination, addressing the UK commercial trials crisis. Managed severe class imbalance and engineered ISRCTN pipelines in Snowflake, tracked via MLflow.</p>
+                        <div class="mt-auto flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">XGBoost</span>
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">Snowflake</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-forest-900 mb-3">AI Content Curation</h3>
-                        <p class="text-gray-600 flex-grow leading-relaxed">Developed an intelligent Python curation system, achieving a 95% time reduction in identifying critical industry stories for stakeholders.</p>
                     </div>
 
-                    <!-- Power BI Project -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-forest-100 flex flex-col group">
-                        <div class="bg-forest-50 w-16 h-16 rounded-lg flex items-center justify-center text-forest-700 mb-6 group-hover:bg-forest-700 group-hover:text-white transition-colors duration-300">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
+                    <!-- Content Curation -->
+                    <div class="flex flex-col h-full p-1 border-b-4 border-forest-100 hover:border-forest-700 transition-all duration-500 group">
+                        <span class="text-xs font-black text-gray-400 uppercase tracking-widest group-hover:text-forest-500 transition-colors">Data Engineering</span>
+                        <h4 class="text-2xl font-bold text-forest-900 mt-4 mb-3">AI-Driven Content Engine</h4>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4">Slashed research time by 95% via a custom app ingesting Readwise API data into Snowflake and Postgres. Enables semantic search, LLM-driven interrogation, and automated local backups.</p>
+                        <div class="mt-auto flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">Postgres</span>
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">LLM API</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-forest-900 mb-3">Energy KPI Dashboard</h3>
-                        <p class="text-gray-600 flex-grow leading-relaxed">Executive Power BI suite combining live forecasts and historical SQL data to drive real-time decision making for energy sector clients.</p>
                     </div>
 
-                    <!-- Finance Project -->
-                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-forest-100 flex flex-col group">
-                        <div class="bg-forest-50 w-16 h-16 rounded-lg flex items-center justify-center text-forest-700 mb-6 group-hover:bg-forest-700 group-hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                    <!-- Land Registry -->
+                    <div class="flex flex-col h-full p-1 border-b-4 border-forest-100 hover:border-forest-700 transition-all duration-500 group">
+                        <span class="text-xs font-black text-gray-400 uppercase tracking-widest group-hover:text-forest-500 transition-colors">Big Data Analytics</span>
+                        <h4 class="text-2xl font-bold text-forest-900 mt-4 mb-3">HM Land Registry Analysis</h4>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4">Analysed overseas ownership trends using Snowflake SQL, identifying a 2018 peak of 40k events/month. Optimised fuzzy joins using custom "blocking" strategies to handle massive government datasets.</p>
+                        <div class="mt-auto flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">SQL Optimization</span>
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">Snowflake</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-forest-900 mb-3">Healthcare Strategic Model</h3>
-                        <p class="text-gray-600 flex-grow leading-relaxed">Comprehensive 3-statement financial model featuring robust 5-year projections for a healthcare enterprise restructuring.</p>
                     </div>
 
+                    <!-- Renewable Energy -->
+                    <div class="flex flex-col h-full p-1 border-b-4 border-forest-100 hover:border-forest-700 transition-all duration-500 group">
+                        <span class="text-xs font-black text-gray-400 uppercase tracking-widest group-hover:text-forest-500 transition-colors">Predictive Modelling</span>
+                        <h4 class="text-2xl font-bold text-forest-900 mt-4 mb-3">Energy Planning Predictor</h4>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4">Benchmarked Neural Networks against traditional baselines for UK renewable planning outcomes (89:11 imbalance). Focused on district heating feasibility in Park Royal (HS2 zone).</p>
+                        <div class="mt-auto flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">Neural Networks</span>
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">Imbalanced Data</span>
+                        </div>
+                    </div>
+
+                    <!-- AI ROI Dashboard -->
+                    <div class="flex flex-col h-full p-1 border-b-4 border-forest-100 hover:border-forest-700 transition-all duration-500 group">
+                        <span class="text-xs font-black text-gray-400 uppercase tracking-widest group-hover:text-forest-500 transition-colors">Strategy & Viz</span>
+                        <h4 class="text-2xl font-bold text-forest-900 mt-4 mb-3">Global AI ROI Dashboard</h4>
+                        <p class="text-gray-600 font-light leading-relaxed mb-4">Executive PowerBI dashboard visualising AI impact. Revealed Founders (3.22/5) outperform Enterprise (2.94/5), with Tech (42.2%) and Healthcare (38.3%) leading sector returns.</p>
+                        <div class="mt-auto flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">PowerBI</span>
+                            <span class="text-[10px] font-bold bg-forest-50 text-forest-700 px-2 py-1 rounded">Strategy</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Roadmap (Active Research) -->
+        <section id="roadmap" class="py-32 bg-forest-50/30 border-t border-forest-50">
+            <div class="container mx-auto px-6">
+                <div class="mb-20">
+                    <h2 class="text-sm font-black text-forest-500 uppercase tracking-[0.3em] mb-4">Laboratory</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-forest-900 tracking-tight">2026 Technical Roadmap</h3>
+                    <p class="text-gray-500 mt-4 text-xl max-w-2xl font-light">
+                        Deploying production-grade analytics systems focused on healthcare efficiencies and regulatory compliance.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- NHS -->
+                    <div class="group relative bg-white rounded-[2rem] p-10 border border-forest-100 card-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="bg-forest-50 text-forest-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter border border-forest-100">Active</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-forest-900 mb-4 mt-2">NHS Prescribing Persistence</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                            Mining <span class="font-bold text-forest-900">100M+ rows</span> of English prescribing data. Using SQL Window Functions to isolate unwarranted variation across Integrated Care Boards (ICBs).
+                        </p>
+                    </div>
+
+                    <!-- FCA -->
+                    <div class="group relative bg-white rounded-[2rem] p-10 border border-forest-100 card-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="bg-forest-50 text-forest-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter border border-forest-100">Active</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-forest-900 mb-4 mt-2">FCA Triage & Vulnerability</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                            Training a <span class="font-bold text-forest-900">BERT-based classifier</span> on 200k Financial Ombudsman decisions. Automating "Outcome Testing" to flag vulnerability indicators like debt spirals.
+                        </p>
+                    </div>
+
+                    <!-- Art Market -->
+                    <div class="group relative bg-white rounded-[2rem] p-10 border border-forest-100 card-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="bg-forest-50 text-forest-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter border border-forest-100">In Development</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-forest-900 mb-4 mt-2">Art Market Forecasting</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                            Developing an ML model to predict "Sold vs Not Sold" status and valuation bands for gallery inventory optimisation, refining capital allocation strategies in fine arts.
+                        </p>
+                    </div>
+
+                    <!-- Apple Music -->
+                    <div class="group relative bg-white rounded-[2rem] p-10 border border-forest-100 card-hover overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="bg-forest-50 text-forest-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter border border-forest-100">In Development</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-forest-900 mb-4 mt-2">Apple Music AI Agent</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                            Prototyping a neural-network powered recommendation engine using the Apple Music API for hyper-contextual, automated playlist management and discovery.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Articles Section -->
-        <section id="articles" class="bg-white py-24">
+        <section id="articles" class="bg-forest-950 py-32 text-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-forest-900 mb-16">Publications & Insights</h2>
-                <div class="max-w-4xl mx-auto space-y-10">
-                    
-                    <!-- Article 1 -->
-                    <div class="bg-forest-50 border border-forest-100 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-500 flex flex-col md:flex-row gap-8 items-center">
-                        <div class="w-full md:w-1/3 bg-forest-100 h-48 rounded-xl flex items-center justify-center overflow-hidden">
-                            <span class="text-forest-700 font-bold">ESG Analysis</span>
-                        </div>
-                        <div class="w-full md:w-2/3">
-                            <h3 class="text-2xl font-bold text-forest-900 mb-3">Demystifying ESG in Modern Business</h3>
-                            <p class="text-gray-600 mb-6">Analyzing the strategic shift where Environmental and Social factors become core financial performance indicators.</p>
-                            <a href="https://medium.com" target="_blank" class="inline-flex items-center text-forest-700 font-bold hover:text-forest-900 group">
-                                Read Full Story 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </a>
-                        </div>
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-sm font-black text-forest-400 uppercase tracking-[0.3em] mb-4">Thought Leadership</h2>
+                        <h3 class="text-4xl md:text-5xl font-extrabold tracking-tight">Insights on the <span class="text-forest-400">Algorithmic</span> Frontier</h3>
                     </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Article 1 -->
+                    <a href="https://gemini.google.com/app/208d56f51e75ffc8" target="_blank" class="group block p-12 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-white/10 transition-all duration-500">
+                        <div class="mb-8 opacity-50 group-hover:opacity-100 transition-opacity">
+                            <span class="text-xs font-black tracking-widest uppercase px-4 py-1 border border-white/20 rounded-full">Publication • 2025</span>
+                        </div>
+                        <h4 class="text-3xl font-bold mb-6 group-hover:text-forest-400 transition-colors">The Algorithmic Crescendo: AI in Creative Computation</h4>
+                        <p class="text-forest-100/60 mb-10 text-lg leading-relaxed font-light">Analysing the scaling of AI from experimental novelties to essential business infrastructure within creative industries.</p>
+                        <div class="flex items-center gap-3 font-bold text-sm text-forest-400 uppercase tracking-widest">
+                            Source: Gemini Insights
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </a>
 
                     <!-- Article 2 -->
-                    <div class="bg-forest-50 border border-forest-100 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-500 flex flex-col md:flex-row gap-8 items-center">
-                        <div class="w-full md:w-1/3 bg-forest-200 h-48 rounded-xl flex items-center justify-center overflow-hidden">
-                            <span class="text-forest-900 font-bold">5G Revolution</span>
+                    <a href="https://gemini.google.com/app/2be7bc7bfeb58472" target="_blank" class="group block p-12 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-white/10 transition-all duration-500">
+                        <div class="mb-8 opacity-50 group-hover:opacity-100 transition-opacity">
+                            <span class="text-xs font-black tracking-widest uppercase px-4 py-1 border border-white/20 rounded-full">Research • 2025</span>
                         </div>
-                        <div class="w-full md:w-2/3">
-                            <h3 class="text-2xl font-bold text-forest-900 mb-3">The UK's 5G Strategic Rollout</h3>
-                            <p class="text-gray-600 mb-6">Investigating the cross-industry impact of 5G infrastructure on UK digital transformation and economic growth.</p>
-                            <a href="https://linkedin.com" target="_blank" class="inline-flex items-center text-forest-700 font-bold hover:text-forest-900 group">
-                                Read Full Story 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </a>
+                        <h4 class="text-3xl font-bold mb-6 group-hover:text-forest-400 transition-colors">Decoding the Symphony: Industrialising Machine Intelligence</h4>
+                        <p class="text-forest-100/60 mb-10 text-lg leading-relaxed font-light">Investigating the transition phase where AI tools become standard operating procedure for high-growth enterprises.</p>
+                        <div class="flex items-center gap-3 font-bold text-sm text-forest-400 uppercase tracking-widest">
+                            Source: Research Library
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-forest-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-forest-900 mb-16">Technical Arsenal</h2>
-                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                    <!-- Core Skills -->
-                    <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-forest-100 font-semibold text-forest-700 hover:scale-105 transition-transform">Python</div>
-                    <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-forest-100 font-semibold text-forest-700 hover:scale-105 transition-transform">SQL</div>
-                    <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-forest-100 font-semibold text-forest-700 hover:scale-105 transition-transform">Power BI</div>
-                    <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-forest-100 font-semibold text-forest-700 hover:scale-105 transition-transform">Alteryx</div>
-                    <div class="px-6 py-3 bg-white rounded-full shadow-sm border border-forest-100 font-semibold text-forest-700 hover:scale-105 transition-transform">Generative AI</div>
-                    <div class="px-6 py-3 bg-forest-100 rounded-full shadow-sm border border-forest-200 font-medium text-forest-900">Financial Modelling</div>
-                    <div class="px-6 py-3 bg-forest-100 rounded-full shadow-sm border border-forest-200 font-medium text-forest-900">Process Automation</div>
-                    <div class="px-6 py-3 bg-forest-100 rounded-full shadow-sm border border-forest-200 font-medium text-forest-900">Strategic Research</div>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-24 bg-forest-900 text-white overflow-hidden">
-            <div class="container mx-auto px-6 max-w-3xl text-center relative z-10">
-                <h2 class="text-4xl font-bold mb-6 text-forest-100">Let's Build Something Together</h2>
-                <p class="text-forest-100/70 mb-12 text-lg">Open to consulting opportunities, full-time roles, and strategic collaborations.</p>
-                
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
-                    <a href="mailto:i.o.chisom@gmail.com" class="flex items-center gap-2 hover:text-forest-100 transition border-b border-transparent hover:border-forest-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" /></svg>
-                        i.o.chisom@gmail.com
-                    </a>
-                    <a href="https://linkedin.com/in/chisom-ihuoma" target="_blank" class="flex items-center gap-2 hover:text-forest-100 transition border-b border-transparent hover:border-forest-100">
-                        LinkedIn Profile
-                    </a>
-                </div>
+        <section id="contact" class="py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <div>
+                        <h2 class="text-sm font-black text-forest-500 uppercase tracking-[0.3em] mb-4">Connect</h2>
+                        <h3 class="text-5xl font-black text-forest-900 mb-8 tracking-tight leading-tight">Let's discuss <br> your next project.</h3>
+                        <p class="text-xl text-gray-600 mb-12 font-light leading-relaxed">
+                            Available for analyst roles, technical partnerships, and strategic collaborations involving high-scale data.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <a href="mailto:i.o.chisom@gmail.com" class="flex items-center gap-6 p-6 rounded-2xl bg-forest-50 border border-forest-100 hover:border-forest-500 transition-all group">
+                                <div class="w-12 h-12 bg-forest-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <span class="text-lg font-bold text-forest-900">i.o.chisom@gmail.com</span>
+                            </a>
+                            
+                            <a href="https://linkedin.com/in/chisom-ihuoma" target="_blank" class="flex items-center gap-6 p-6 rounded-2xl bg-forest-50 border border-forest-100 hover:border-forest-500 transition-all group">
+                                <div class="w-12 h-12 bg-forest-500 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-lg font-bold text-forest-900">LinkedIn Profile</span>
+                            </a>
+                        </div>
+                    </div>
 
-                <form class="bg-white p-10 rounded-3xl shadow-2xl text-forest-900 text-left">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-sm font-bold uppercase tracking-wider mb-2 text-forest-700">Name</label>
-                            <input type="text" class="w-full px-5 py-3 bg-forest-50 border border-forest-100 rounded-xl focus:ring-2 focus:ring-forest-700 focus:outline-none" placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold uppercase tracking-wider mb-2 text-forest-700">Email</label>
-                            <input type="email" class="w-full px-5 py-3 bg-forest-50 border border-forest-100 rounded-xl focus:ring-2 focus:ring-forest-700 focus:outline-none" placeholder="john@example.com">
-                        </div>
+                    <div class="bg-forest-50 p-12 rounded-[3rem] border border-forest-100">
+                        <form id="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully! (Demo Mode)');">
+                            <div class="space-y-8">
+                                <div>
+                                    <label class="block text-[10px] font-black uppercase tracking-widest text-forest-700 mb-3">Name</label>
+                                    <input type="text" required class="w-full bg-transparent border-b-2 border-forest-200 focus:border-forest-900 py-2 outline-none transition-colors placeholder:text-forest-300" placeholder="Your Full Name">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-black uppercase tracking-widest text-forest-700 mb-3">Email</label>
+                                    <input type="email" required class="w-full bg-transparent border-b-2 border-forest-200 focus:border-forest-900 py-2 outline-none transition-colors placeholder:text-forest-300" placeholder="email@address.com">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-black uppercase tracking-widest text-forest-700 mb-3">How can I help?</label>
+                                    <textarea required rows="4" class="w-full bg-transparent border-b-2 border-forest-200 focus:border-forest-900 py-2 outline-none transition-colors resize-none placeholder:text-forest-300" placeholder="Briefly describe your objectives..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-forest-900 text-white py-6 rounded-2xl font-bold text-lg hover:bg-forest-700 shadow-xl transition-all hover:shadow-forest-900/20 active:scale-[0.98]">
+                                    Initialize Connection
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="mb-8">
-                        <label class="block text-sm font-bold uppercase tracking-wider mb-2 text-forest-700">Message</label>
-                        <textarea rows="4" class="w-full px-5 py-3 bg-forest-50 border border-forest-100 rounded-xl focus:ring-2 focus:ring-forest-700 focus:outline-none" placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-forest-700 text-white py-4 rounded-xl font-bold text-lg hover:bg-forest-900 transform active:scale-95 transition-all shadow-lg">Send Message</button>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-forest-900 text-forest-100/40 py-12 border-t border-forest-700/50">
+    <footer class="bg-white py-20 border-t border-forest-50">
         <div class="container mx-auto px-6 text-center">
-            <p class="mb-2">&copy; 2025 Chisom Ihuoma. All rights reserved.</p>
-            <p class="text-sm">Engineered for Performance | Forest Green Edition</p>
+            <div class="text-xl font-extrabold tracking-tight text-forest-900 mb-8">
+                CHISOM <span class="text-forest-500">IHUOMA</span>
+            </div>
+            <p class="text-forest-900/40 text-sm font-medium uppercase tracking-[0.4em] mb-4">© 2026 • London</p>
         </div>
     </footer>
 
     <script>
-        // Toggle mobile menu
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu on click
-        const links = menu.querySelectorAll('a');
-        links.forEach(link => {
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+                mobileMenu.classList.add('hidden');
             });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        // Add initial states to sections
+        document.querySelectorAll('section').forEach(section => {
+            if (section.id !== 'home') {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            }
         });
     </script>
 </body>
