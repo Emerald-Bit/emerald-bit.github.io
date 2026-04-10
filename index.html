@@ -76,16 +76,23 @@
     <!-- Navigation -->
     <nav class="glass-nav sticky top-0 z-50 border-b border-forest-100/50">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl font-extrabold tracking-tight text-forest-900 group">
+            <a onclick="document.getElementById('home').scrollIntoView()" class="cursor-pointer text-xl font-extrabold tracking-tight text-forest-900 group">
                 CHISOM <span class="text-forest-500 group-hover:text-forest-700 transition-colors">IHUOMA</span>
             </a>
             
             <div class="hidden md:flex items-center space-x-10">
-                <a href="#home" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Home</a>
-                <a href="#projects" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Projects</a>
-                <a href="#articles" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Insights</a>
-                <a href="#roadmap" class="text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Roadmap</a>
-                <a href="#contact" class="bg-forest-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-forest-700 transition-all shadow-lg shadow-forest-900/10">
+                <a onclick="document.getElementById('home').scrollIntoView()" class="cursor-pointer text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Home</a>
+                <a onclick="document.getElementById('live-demo').scrollIntoView()" class="cursor-pointer text-sm font-bold text-forest-600 hover:text-forest-900 transition flex items-center gap-2">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-forest-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-forest-500"></span>
+                    </span>
+                    Live Demos
+                </a>
+                <a onclick="document.getElementById('projects').scrollIntoView()" class="cursor-pointer text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Projects</a>
+                <a onclick="document.getElementById('articles').scrollIntoView()" class="cursor-pointer text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Insights</a>
+                <a onclick="document.getElementById('roadmap').scrollIntoView()" class="cursor-pointer text-sm font-semibold text-gray-500 hover:text-forest-700 transition">Roadmap</a>
+                <a onclick="document.getElementById('contact').scrollIntoView()" class="cursor-pointer bg-forest-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-forest-700 transition-all shadow-lg shadow-forest-900/10">
                     Connect
                 </a>
             </div>
@@ -100,11 +107,18 @@
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-forest-100 shadow-xl md:hidden animate-in slide-in-from-top duration-300">
             <div class="flex flex-col p-6 space-y-4">
-                <a href="#home" class="mobile-link text-lg font-medium text-forest-900">Home</a>
-                <a href="#projects" class="mobile-link text-lg font-medium text-forest-900">Projects</a>
-                <a href="#articles" class="mobile-link text-lg font-medium text-forest-900">Insights</a>
-                <a href="#roadmap" class="mobile-link text-lg font-medium text-forest-900">Roadmap</a>
-                <a href="#contact" class="mobile-link text-lg font-bold text-forest-500">Contact</a>
+                <a onclick="document.getElementById('home').scrollIntoView()" class="cursor-pointer mobile-link text-lg font-medium text-forest-900">Home</a>
+                <a onclick="document.getElementById('live-demo').scrollIntoView()" class="cursor-pointer mobile-link text-lg font-bold text-forest-600 flex items-center gap-2">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-forest-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-forest-500"></span>
+                    </span>
+                    Live Demos
+                </a>
+                <a onclick="document.getElementById('projects').scrollIntoView()" class="cursor-pointer mobile-link text-lg font-medium text-forest-900">Projects</a>
+                <a onclick="document.getElementById('articles').scrollIntoView()" class="cursor-pointer mobile-link text-lg font-medium text-forest-900">Insights</a>
+                <a onclick="document.getElementById('roadmap').scrollIntoView()" class="cursor-pointer mobile-link text-lg font-medium text-forest-900">Roadmap</a>
+                <a onclick="document.getElementById('contact').scrollIntoView()" class="cursor-pointer mobile-link text-lg font-bold text-forest-500">Contact</a>
             </div>
         </div>
     </nav>
@@ -128,11 +142,11 @@
                         Machine Learning Engineer with a professional services and STEM background. Specialised in high-scale data systems, process optimisation, and AI-powered automation for complex industries.
                     </p>
                     <div class="flex flex-wrap gap-6">
-                        <a href="#projects" class="bg-forest-700 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-forest-900 transition-all shadow-xl shadow-forest-900/20 active:scale-95">
-                            View Portfolio
+                        <a onclick="document.getElementById('live-demo').scrollIntoView()" class="cursor-pointer bg-forest-700 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-forest-900 transition-all shadow-xl shadow-forest-900/20 active:scale-95">
+                            Try Live Demos
                         </a>
-                        <div class="flex items-center gap-4 text-forest-900 font-bold group cursor-pointer" onclick="document.getElementById('roadmap').scrollIntoView()">
-                            <span class="border-b-2 border-forest-100 group-hover:border-forest-700 transition-all">Future Roadmap</span>
+                        <div class="flex items-center gap-4 text-forest-900 font-bold group cursor-pointer" onclick="document.getElementById('projects').scrollIntoView()">
+                            <span class="border-b-2 border-forest-100 group-hover:border-forest-700 transition-all">View Portfolio</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
