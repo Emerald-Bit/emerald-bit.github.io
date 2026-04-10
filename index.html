@@ -27,11 +27,11 @@
                             200: '#c5d5d1',
                             300: '#9db8b2',
                             400: '#71958e',
-                            500: '#5a8081', // Main Primary
+                            500: '#5a8081',
                             600: '#466667',
-                            700: '#3e5c59', // Dark Accent
+                            700: '#3e5c59',
                             800: '#334948',
-                            900: '#2a3a3a', // Deep Neutral
+                            900: '#2a3a3a',
                             950: '#162323',
                         }
                     },
@@ -264,13 +264,12 @@
                     </p>
                 </div>
                 
-                <!-- Grid: 2 Columns -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     
                     <!-- Clinical Trials -->
                     <div class="flex flex-col h-full bg-forest-50/50 border border-forest-100 rounded-[2rem] p-8 hover:border-forest-400 hover:shadow-xl transition-all duration-500 group">
-                        <img src="clinical.png" alt="Clinical trial risk model" width="1000">
                         <div class="aspect-[16/9] w-full bg-forest-100 rounded-xl mb-8 flex items-center justify-center border border-forest-200 overflow-hidden relative">
+                            <img src="clinical.png" alt="Clinical trial risk model" class="w-full h-full object-cover">
                         </div>
                         
                         <div class="flex justify-between items-start mb-4">
@@ -311,7 +310,6 @@
                         <div class="aspect-[16/9] w-full bg-forest-100 rounded-xl mb-8 flex items-center justify-center border border-forest-200 overflow-hidden relative">
                             <img src="readwise.png" alt="Readwise project image" class="w-full h-full object-cover">
                         </div>
-                    </div>
 
                         <div class="flex justify-between items-start mb-4">
                             <span class="text-xs font-black text-forest-500 uppercase tracking-widest">Data Engineering</span>
@@ -346,9 +344,8 @@
 
                     <!-- Land Registry -->
                     <div class="flex flex-col h-full bg-forest-50/50 border border-forest-100 rounded-[2rem] p-8 hover:border-forest-400 hover:shadow-xl transition-all duration-500 group">
-                        <!-- Visual Proof Placeholder -->
                         <div class="aspect-[16/9] w-full bg-forest-100 rounded-xl mb-8 flex items-center justify-center border border-forest-200 overflow-hidden relative">
-                            <span class="text-forest-400/80 font-bold uppercase tracking-widest text-xs z-10">[ Visual Proof Placeholder ]</span>
+                            <img src="fig2_top4_over_time.png" alt="HM Land Registry analysis chart" class="w-full h-full object-cover">
                         </div>
 
                         <div class="flex justify-between items-start mb-4">
@@ -383,9 +380,8 @@
 
                     <!-- Renewable Energy -->
                     <div class="flex flex-col h-full bg-forest-50/50 border border-forest-100 rounded-[2rem] p-8 hover:border-forest-400 hover:shadow-xl transition-all duration-500 group">
-                        <!-- Visual Proof Placeholder -->
                         <div class="aspect-[16/9] w-full bg-forest-100 rounded-xl mb-8 flex items-center justify-center border border-forest-200 overflow-hidden relative">
-                            <span class="text-forest-400/80 font-bold uppercase tracking-widest text-xs z-10">[ Visual Proof Placeholder ]</span>
+                            <img src="energy planning.png" alt="Energy planning predictor" class="w-full h-full object-cover">
                         </div>
 
                         <div class="flex justify-between items-start mb-4">
@@ -425,7 +421,7 @@
             </div>
         </section>
 
-        <!-- Articles Section (Moved Above Roadmap) -->
+        <!-- Articles Section -->
         <section id="articles" class="bg-forest-50/50 py-32 border-t border-forest-50">
             <div class="container mx-auto px-6">
                 <div class="mb-20 text-center max-w-3xl mx-auto">
@@ -436,11 +432,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <!-- Article 1 -->
                     <a href="https://www.linkedin.com/pulse/decoding-symphony-ai-music-past-present-future-chisom-ihuoma-" target="_blank" class="flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="h-56 w-full bg-forest-100 relative">
-                            <!-- Visual Proof Placeholder -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-forest-400/80 font-bold uppercase tracking-widest text-xs">[ Image Placeholder ]</span>
-                            </div>
+                        <div class="h-56 w-full bg-forest-100 relative overflow-hidden">
+                            <img src="decoding.jpg" alt="Decoding AI in music article image" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
                             <span class="text-[10px] font-black tracking-widest uppercase text-forest-500 mb-3">Publication</span>
@@ -460,11 +453,8 @@
 
                     <!-- Article 2 -->
                     <a href="https://www.linkedin.com/pulse/resurrecting-beethoven-bach-revolutionary-impact-ai-music-ihuoma-" target="_blank" class="flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="h-56 w-full bg-forest-100 relative">
-                            <!-- Visual Proof Placeholder -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-forest-400/80 font-bold uppercase tracking-widest text-xs">[ Image Placeholder ]</span>
-                            </div>
+                        <div class="h-56 w-full bg-forest-100 relative overflow-hidden">
+                            <img src="beethoven.jpg" alt="Beethoven article image" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
                             <span class="text-[10px] font-black tracking-widest uppercase text-forest-500 mb-3">Publication</span>
@@ -484,11 +474,8 @@
 
                     <!-- Article 3 -->
                     <a href="https://www.linkedin.com/pulse/can-heat-pumps-fuel-uks-net-zero-ambitions-insight-chisom-ihuoma-" target="_blank" class="flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="h-56 w-full bg-forest-100 relative">
-                            <!-- Visual Proof Placeholder -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-forest-400/80 font-bold uppercase tracking-widest text-xs">[ Image Placeholder ]</span>
-                            </div>
+                        <div class="h-56 w-full bg-forest-100 relative overflow-hidden">
+                            <img src="heatpumps.jpg" alt="Heat pumps article image" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
                             <span class="text-[10px] font-black tracking-widest uppercase text-forest-500 mb-3">Publication</span>
@@ -508,11 +495,8 @@
 
                     <!-- Article 4 -->
                     <a href="https://www.linkedin.com/pulse/breakthrough-innovations-shaping-future-renewable-energy-ihuoma-" target="_blank" class="flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="h-56 w-full bg-forest-100 relative">
-                            <!-- Visual Proof Placeholder -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-forest-400/80 font-bold uppercase tracking-widest text-xs">[ Image Placeholder ]</span>
-                            </div>
+                        <div class="h-56 w-full bg-forest-100 relative overflow-hidden">
+                            <img src="breakthrough.jpg" alt="Breakthrough innovations article image" class="w-full h-full object-cover">
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
                             <span class="text-[10px] font-black tracking-widest uppercase text-forest-500 mb-3">Publication</span>
@@ -619,7 +603,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -634,7 +617,6 @@
             });
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1
         };
@@ -648,7 +630,6 @@
             });
         }, observerOptions);
 
-        // Add initial states to sections
         document.querySelectorAll('section').forEach(section => {
             if (section.id !== 'home') {
                 section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
